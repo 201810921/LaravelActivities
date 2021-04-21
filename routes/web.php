@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::post('/users', 'UserController@store')->name('user.store');
 Route::get('/users/create', 'UserController@create');
 Route::get('/users/{id}', 'UserController@show')->name('user.show');
 Route::delete('/users/{id}', 'UserController@destroy')->name('user.destroy');
+
+Route::resource('/posts', 'PostController');
